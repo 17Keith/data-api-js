@@ -28,3 +28,22 @@ async function getMultipleImages(urls) {
     return images;
 }
 
+// Displaying the images
+
+function displayImages(images) {
+    const rainbowContainer = document.getElementById("rainbow");
+    images.forEach(imageURL => {
+        const imgElement = document.createElement('img');
+        imgElement.src = imageURL;
+        rainbowContainer.appendChild(imgElement);
+    })
+}
+
+getMultipleImages(imageURL)
+    .then(images => {
+        console.log('Images fetched:', images);
+        displayImages(images);
+    })
+    .catch(error => {
+        console.error('Error fetching images:', error);
+    });
