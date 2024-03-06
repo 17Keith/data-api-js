@@ -1,0 +1,1 @@
+Using either async/await() or fetch() to get an array of multiple images. 
