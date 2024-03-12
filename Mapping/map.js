@@ -16,8 +16,8 @@ async function getIss() {
         // const velocityKph = velocity * 3.6;
 
         // Convert time to localtime
-        document.getElementById("lat").textContent = latitude;
-        document.getElementById("lon").textContent = longitude;
+        document.getElementById("lat").textContent = latitude.toFixed(2); //Add decimal places. 
+        document.getElementById("lon").textContent = longitude.toFixed(2); 
         // document.getElementById("velo").textContent = velocityKph.toFixed(2) + " Km/H";
 
         // Remove previous markers
